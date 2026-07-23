@@ -370,7 +370,7 @@
       <p>Este é o objetivo central da parceria: leve o link rastreável abaixo para e-mail marketing, redes sociais e demais canais da sua empresa.</p>
       <div class="link-box">
         <span id="track-link">https://credenciamento2.ehub.net.br/acesso/cadastro_feira.php#parceirosamicci</span>
-        <button class="copy-btn" onclick="copyLink()">Copiar link</button>
+        <button class="copy-btn" onclick="copyLink(event)">Copiar link</button>
       </div>
     </div>
     <div class="cta-actions">
@@ -572,14 +572,14 @@
     <span>|</span>
     <span>Marcas próprias <strong>fortes</strong> com Amicci</span>
   </div>
-  <a href="https://www.amicci.com.br" style="color: var(--amicci-turquesa-escuro);">www.<strong>amicci</strong>.com.br</a>
+  <a href="https://www.amicci.com.br" target="_blank" rel="noopener" style="color: var(--amicci-turquesa-escuro);">www.<strong>amicci</strong>.com.br</a>
 </footer>
 
 <script>
-  function copyLink() {
+  function copyLink(e) {
     const text = document.getElementById('track-link').innerText;
     navigator.clipboard.writeText(text).then(() => {
-      const btn = event.target;
+      const btn = e.target;
       const original = btn.innerText;
       btn.innerText = 'Copiado!';
       setTimeout(() => { btn.innerText = original; }, 1800);
