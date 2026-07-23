@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PL Connection 2026 — Guia de Parcerias de Comunicação</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --amicci-turquesa: #0FC2C0;
+    --amicci-branco: #FFFFFF;
+    --amicci-neon-turquesa: #53F3E4;
+    --amicci-turquesa-escuro: #016071;
+    --amicci-turquesa-quase-preto: #002831;
+    --amicci-magenta: #9B237F;
+    --amicci-roxo: #7C5DA7;
+    --amicci-preto: #000000;
+    --amicci-turquesa-chumbo: #304545;
+    --amicci-cinza-medio: #494F4F;
+    --amicci-turquesa-claro: #EAF9F8;
+    --amicci-cinza-claro: #F2F6F5;
+    --amicci-turquesa-soft: rgba(15, 194, 192, 0.08);
+    --amicci-font-stack: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --amicci-radius-sm: 4px;
+    --amicci-radius-md: 8px;
+    --amicci-radius-lg: 16px;
+    --amicci-shadow-soft: 0 2px 8px rgba(1, 96, 113, 0.08);
+    --amicci-shadow-strong: 0 8px 24px rgba(1, 96, 113, 0.16);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: var(--amicci-font-stack);
+    color: var(--amicci-preto);
+    background: var(--amicci-branco);
+    line-height: 1.5;
+  }
+
+  h1, h2, h3 {
+    color: var(--amicci-turquesa-escuro);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0 0 12px 0;
+  }
+
+  a { color: var(--amicci-turquesa-escuro); }
+
+  .wordmark {
+    font-weight: 900;
+    font-size: 22px;
+    letter-spacing: -0.02em;
+  }
+  .wordmark span { color: var(--amicci-neon-turquesa); }
+
+  header.hero {
+    background: linear-gradient(135deg, var(--amicci-turquesa-quase-preto) 0%, var(--amicci-turquesa-escuro) 100%);
+    color: var(--amicci-branco);
+    padding: 40px 24px 56px;
+  }
+
+  .hero-inner {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  header.hero .top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+  }
+
+  .eyebrow {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--amicci-neon-turquesa);
+    margin-bottom: 8px;
+  }
+
+  header.hero h1 {
+    color: var(--amicci-branco);
+    font-size: 32px;
+    max-width: 700px;
+  }
+
+  header.hero p.lead {
+    color: #CDEAE8;
+    font-size: 16px;
+    max-width: 620px;
+    margin: 0;
+  }
+
+  main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 24px 64px;
+  }
+
+  .cta-band {
+    background: var(--amicci-branco);
+    border-radius: var(--amicci-radius-lg);
+    box-shadow: var(--amicci-shadow-strong);
+    padding: 28px 32px;
+    margin-top: -40px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 4px solid var(--amicci-turquesa);
+  }
+
+  .cta-band .cta-text { flex: 1; min-width: 260px; }
+
+  .cta-band .cta-label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--amicci-magenta);
+    margin-bottom: 6px;
+  }
+
+  .cta-band h2 { font-size: 20px; margin-bottom: 4px; }
+  .cta-band p { margin: 0; color: var(--amicci-cinza-medio); font-size: 14px; }
+
+  .cta-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border-radius: var(--amicci-radius-sm);
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--amicci-font-stack);
+  }
+  .btn-primary { background: var(--amicci-turquesa); color: #FFF; }
+  .btn-primary:hover { background: var(--amicci-turquesa-escuro); }
+  .btn-secondary {
+    background: transparent;
+    color: var(--amicci-turquesa-escuro);
+    border: 2px solid var(--amicci-turquesa-escuro);
+  }
+
+  .link-box {
+    margin-top: 14px;
+    background: var(--amicci-turquesa-claro);
+    border-radius: var(--amicci-radius-sm);
+    padding: 10px 14px;
+    font-size: 13px;
+    color: var(--amicci-turquesa-escuro);
+    word-break: break-all;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .copy-btn {
+    background: var(--amicci-turquesa-escuro);
+    color: #fff;
+    border: none;
+    border-radius: var(--amicci-radius-sm);
+    padding: 6px 12px;
+    font-size: 12px;
+    cursor: pointer;
+    white-space: nowrap;
+    font-family: var(--amicci-font-stack);
+  }
+
+  section { margin-top: 56px; }
+
+  section .section-eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--amicci-turquesa);
+    margin-bottom: 6px;
+  }
+
+  section > p.section-desc {
+    color: var(--amicci-turquesa-chumbo);
+    max-width: 700px;
+    margin-bottom: 24px;
+  }
+
+  .materials-card {
+    background: var(--amicci-cinza-claro);
+    border-radius: var(--amicci-radius-md);
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    box-shadow: var(--amicci-shadow-soft);
+  }
+  .materials-card ul { margin: 8px 0 0; padding-left: 18px; color: var(--amicci-cinza-medio); font-size: 14px; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--amicci-branco);
+    border-radius: var(--amicci-radius-md);
+    overflow: hidden;
+    box-shadow: var(--amicci-shadow-soft);
+    font-size: 14px;
+  }
+  thead th {
+    background: var(--amicci-turquesa-escuro);
+    color: #FFF;
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 500;
+  }
+  tbody td {
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(48, 69, 69, 0.08);
+    vertical-align: top;
+    color: var(--amicci-turquesa-chumbo);
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: var(--amicci-turquesa-soft); }
+  td.col-formato { font-weight: 700; color: var(--amicci-turquesa-escuro); white-space: nowrap; }
+  .tag {
+    display: inline-block;
+    background: var(--amicci-turquesa-claro);
+    color: var(--amicci-turquesa-escuro);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 100px;
+  }
+  .tag.opcional { background: #F2F6F5; color: var(--amicci-cinza-medio); }
+
+  .table-scroll { overflow-x: auto; }
+
+  .timeline {
+    position: relative;
+    padding-left: 28px;
+    border-left: 3px solid var(--amicci-turquesa);
+  }
+  .timeline-item { position: relative; padding-bottom: 32px; }
+  .timeline-item:last-child { padding-bottom: 0; }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -35.5px;
+    top: 4px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--amicci-turquesa);
+    border: 3px solid var(--amicci-branco);
+    box-shadow: 0 0 0 2px var(--amicci-turquesa);
+  }
+  .timeline-item .period {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--amicci-magenta);
+    margin-bottom: 4px;
+  }
+  .timeline-item .card {
+    background: var(--amicci-cinza-claro);
+    border-radius: var(--amicci-radius-md);
+    padding: 16px 20px;
+  }
+  .timeline-item h3 { font-size: 15px; margin-bottom: 8px; }
+  .timeline-item ul { margin: 0; padding-left: 18px; font-size: 14px; color: var(--amicci-turquesa-chumbo); }
+  .timeline-item li { margin-bottom: 4px; }
+  .note {
+    font-size: 12px;
+    color: var(--amicci-cinza-medio);
+    margin-top: 12px;
+  }
+
+  details.faq {
+    background: var(--amicci-branco);
+    border-radius: var(--amicci-radius-md);
+    box-shadow: var(--amicci-shadow-soft);
+    padding: 4px 20px;
+    margin-bottom: 12px;
+  }
+  details.faq summary {
+    cursor: pointer;
+    padding: 16px 0;
+    font-weight: 700;
+    color: var(--amicci-turquesa-escuro);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  details.faq summary::-webkit-details-marker { display: none; }
+  details.faq summary::after {
+    content: '+';
+    font-size: 20px;
+    color: var(--amicci-turquesa);
+  }
+  details.faq[open] summary::after { content: '–'; }
+  details.faq p { margin: 0 0 16px; color: var(--amicci-turquesa-chumbo); font-size: 14px; }
+
+  .confirm-card {
+    background: linear-gradient(135deg, var(--amicci-turquesa-quase-preto) 0%, var(--amicci-turquesa-escuro) 100%);
+    color: var(--amicci-branco);
+    border-radius: var(--amicci-radius-lg);
+    padding: 28px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .confirm-card p { color: #CDEAE8; max-width: 560px; margin: 4px 0 0; font-size: 14px; }
+  .confirm-card h3 { color: #fff; margin-bottom: 0; }
+
+  footer {
+    background: var(--amicci-turquesa-claro);
+    padding: 24px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: var(--amicci-turquesa-chumbo);
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  footer strong { color: var(--amicci-turquesa); }
+
+  @media (max-width: 640px) {
+    header.hero h1 { font-size: 26px; }
+    .cta-band, .confirm-card { flex-direction: column; align-items: flex-start; }
+    .materials-card { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="top-row">
+      <div class="wordmark">amicci<span>.</span></div>
+      <div style="font-size:13px; color:#CDEAE8;">PL Connection 2026 · 25 e 26 de agosto · Expo Center Norte, SP</div>
+    </div>
+    <div class="eyebrow">Guia de parcerias de comunicação — apoiadores</div>
+    <h1>Central de conteúdo para apoiadores do PL Connection 2026</h1>
+    <p class="lead">Tudo o que sua equipe de marketing precisa para divulgar a parceria: pacotes de entrega, direção de conteúdo por formato, calendário e materiais oficiais — em um só lugar.</p>
+  </div>
+</header>
+
+<main>
+  <div class="cta-band">
+    <div class="cta-text">
+      <div class="cta-label">Ação mais importante</div>
+      <h2>Divulgue o credenciamento para a sua base de contatos</h2>
+      <p>Este é o objetivo central da parceria: leve o link rastreável abaixo para e-mail marketing, redes sociais e demais canais da sua empresa.</p>
+      <div class="link-box">
+        <span id="track-link">https://credenciamento2.ehub.net.br/acesso/cadastro_feira.php#parceirosamicci</span>
+        <button class="copy-btn" onclick="copyLink()">Copiar link</button>
+      </div>
+    </div>
+    <div class="cta-actions">
+      <a class="btn btn-primary" href="https://credenciamento2.ehub.net.br/acesso/cadastro_feira.php#parceirosamicci" target="_blank" rel="noopener">Abrir link de credenciamento</a>
+    </div>
+  </div>
+
+  <section id="materiais">
+    <div class="section-eyebrow">Materiais oficiais</div>
+    <h2>Pasta com todos os arquivos da parceria</h2>
+    <p class="section-desc">Key visual, logos do evento, paleta de cores e fontes ficam centralizados na pasta do Drive. Use somente os arquivos oficiais desta pasta nas suas peças.</p>
+    <div class="materials-card">
+      <div>
+        <strong style="color: var(--amicci-turquesa-escuro);">Pasta "Apoiadores" — Drive</strong>
+        <ul>
+          <li>Key visual (guia de aplicação em PDF)</li>
+          <li>Logos do PL Connection</li>
+          <li>Paleta de cores oficial</li>
+          <li>Fontes do evento</li>
+        </ul>
+      </div>
+      <a class="btn btn-secondary" href="https://drive.google.com/drive/folders/18-aD4B4WoItCvPAuK4gs1SW43kZU0cHj?usp=drive_link" target="_blank" rel="noopener">Acessar pasta no Drive</a>
+    </div>
+  </section>
+
+  <section id="pacotes">
+    <div class="section-eyebrow">Seção 1</div>
+    <h2>Pacotes de divulgação — cota Apoiadores</h2>
+    <p class="section-desc">Volume de entregas previsto para o pacote de Apoiadores, por formato.</p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Formato</th><th>Cota — Apoiadores</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="col-formato">LinkedIn</td><td>2 posts + 1 repost</td></tr>
+          <tr><td class="col-formato">Instagram — Stories</td><td>2 stories</td></tr>
+          <tr><td class="col-formato">Instagram — Feed</td><td>1 post</td></tr>
+          <tr><td class="col-formato">Instagram — Reels</td><td><span class="tag opcional">Opcional</span></td></tr>
+          <tr><td class="col-formato">E-mail marketing</td><td>4 disparos (2 endomarketing interno + 2 público externo)</td></tr>
+          <tr><td class="col-formato">Site — Matéria</td><td><span class="tag opcional">Opcional</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="direcionamento">
+    <div class="section-eyebrow">Seção 2</div>
+    <h2>Direcionamento de conteúdo por formato</h2>
+    <p class="section-desc">Objetivo e ângulo de cada entrega. Todos os CTAs apontam para o link rastreável de credenciamento.</p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Formato</th><th>Cota</th><th>Direção (objetivo/ângulo)</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-formato">LinkedIn</td>
+            <td>2 posts + 1 repost</td>
+            <td>
+              Post 1: anúncio do apoio + CTA para credenciamento (link rastreável).<br>
+              Post 2: contagem regressiva para o evento + CTA para credenciamento (link rastreável).<br>
+              Repost: reforço do post de contagem regressiva.
+            </td>
+          </tr>
+          <tr>
+            <td class="col-formato">Instagram Stories</td>
+            <td>2 stories</td>
+            <td>1 story de anúncio do apoio + 1 story de contagem regressiva/reforço de prazo. Todos com link rastreável.</td>
+          </tr>
+          <tr>
+            <td class="col-formato">Instagram Feed</td>
+            <td>1 post</td>
+            <td>Anúncio do apoio, com CTA de inscrição (link rastreável).</td>
+          </tr>
+          <tr>
+            <td class="col-formato">Instagram Reels</td>
+            <td><span class="tag opcional">Opcional</span></td>
+            <td>Se produzido: takes durante o evento.</td>
+          </tr>
+          <tr>
+            <td class="col-formato">E-mail marketing</td>
+            <td>4 disparos</td>
+            <td>Evoluir ao longo dos disparos: 1º anúncio → 2º palestrantes → 3º tema das palestras → 4º urgência/último prazo. Todos com CTA para inscrição (link rastreável).</td>
+          </tr>
+          <tr>
+            <td class="col-formato">Site — Matéria</td>
+            <td><span class="tag opcional">Opcional</span></td>
+            <td>Se produzida: pauta institucional sobre o encontro varejo-indústria, com citação do parceiro.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="calendario">
+    <div class="section-eyebrow">Seção 3</div>
+    <h2>Calendário de entregas — a partir de 31/07/2026</h2>
+    <p class="section-desc">Sequência sugerida de publicação até o evento (25 e 26 de agosto). Ajuste os dias exatos com o time de comunicação do apoiador, mantendo a ordem entre as entregas.</p>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="period">Semana 1 · a partir de 31/07</div>
+        <div class="card">
+          <h3>Largada da campanha</h3>
+          <ul>
+            <li>LinkedIn — Post 1 (anúncio do apoio + CTA credenciamento)</li>
+            <li>Instagram Feed — post único (anúncio + CTA inscrição)</li>
+            <li>Instagram Stories 1 (anúncio do apoio)</li>
+            <li>E-mail 1/4 (anúncio)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="period">Semana 2</div>
+        <div class="card">
+          <h3>Palestrantes</h3>
+          <ul>
+            <li>E-mail 2/4 — divulgação dos painéis e temas de palestras (CTA com link rastreável de credenciamento)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="period">Semana 3</div>
+        <div class="card">
+          <h3>Reforço de conteúdo</h3>
+          <ul>
+            <li>E-mail 3/4 — reforço do tema das palestras (CTA com link rastreável de credenciamento)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="period">Semana 4 · reta final antes do evento</div>
+        <div class="card">
+          <h3>Contagem regressiva</h3>
+          <ul>
+            <li>LinkedIn — Post 2 (contagem regressiva + CTA credenciamento)</li>
+            <li>Instagram Stories 2 (contagem regressiva/reforço de prazo)</li>
+            <li>E-mail 4/4 (urgência/último prazo)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="period">Véspera / dias do evento</div>
+        <div class="card">
+          <h3>Sustentação</h3>
+          <ul>
+            <li>LinkedIn — Repost (reforço do post de contagem regressiva)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="period">25 e 26/08 — durante o evento</div>
+        <div class="card">
+          <h3>Cobertura ao vivo</h3>
+          <ul>
+            <li>Instagram Reels, se produzido (takes durante o evento)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="note">Datas de semana ilustrativas para ordenar a sequência de entregas. O importante é preservar a ordem: anúncio → palestrantes → tema das palestras → urgência.</p>
+  </section>
+
+  <section id="faq">
+    <div class="section-eyebrow">Seção 4</div>
+    <h2>FAQ de parceiros</h2>
+    <p class="section-desc">Referência rápida para dúvidas frequentes do time de comunicação do apoiador.</p>
+
+    <details class="faq" open>
+      <summary>O que o parceiro entrega em cada pacote?</summary>
+      <p>As entregas descritas na tabela de pacotes (Seção 1). O item mais importante é a divulgação do credenciamento na base de e-mails do apoiador.</p>
+    </details>
+
+    <details class="faq">
+      <summary>Como recebo os materiais?</summary>
+      <p>Em um pacote único (pasta do Drive), após aprovação interna da parceria. Key visual e logos ficam disponíveis na pasta "Materiais oficiais" acima.</p>
+    </details>
+
+    <details class="faq">
+      <summary>Como confirmo que publiquei?</summary>
+      <p>Enviando o link ou print da publicação para o registro de acompanhamento da parceria (ver seção abaixo).</p>
+    </details>
+  </section>
+
+  <section id="confirmacao">
+    <div class="confirm-card">
+      <div>
+        <h3>Já publicou?</h3>
+        <p>Envie o link ou print de cada publicação para a coordenadora da parceria, para manter o registro de acompanhamento atualizado.</p>
+      </div>
+      <a class="btn btn-primary" href="mailto:thayna.cunha@amicci.com.br?subject=PL%20Connection%202026%20-%20Confirmação%20de%20publicação%20(Apoiador)">Enviar confirmação</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div style="display:flex; align-items:center; gap:12px;">
+    <span class="wordmark" style="font-size:16px; color: var(--amicci-turquesa-escuro);">amicci</span>
+    <span>|</span>
+    <span>Marcas próprias <strong>fortes</strong> com Amicci</span>
+  </div>
+  <a href="https://www.amicci.com.br" style="color: var(--amicci-turquesa-escuro);">www.<strong>amicci</strong>.com.br</a>
+</footer>
+
+<script>
+  function copyLink() {
+    const text = document.getElementById('track-link').innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = event.target;
+      const original = btn.innerText;
+      btn.innerText = 'Copiado!';
+      setTimeout(() => { btn.innerText = original; }, 1800);
+    });
+  }
+</script>
+
+</body>
+</html>
